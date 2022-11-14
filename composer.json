@@ -1,0 +1,18 @@
+{
+    "name": "hexlet/code",
+    "description": "hexlet/code",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "alex"
+        }
+    ],
+	"bin": [
+		"bin/brain-games"
+	],
+    "require": {}
+}
