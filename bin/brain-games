@@ -14,7 +14,7 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-echo 'Welcome to the Brain Game!';
+echo "Welcome to the Brain Game!\n";
 //line('Welcome to the Brain Game!');
 
 //$name = prompt('May I have your name?');
