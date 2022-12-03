@@ -1,7 +1,8 @@
 #!/usr/bin/env php
 <?
+echo "Welcome to the Brain Game!\n";
 
-use function cli\line;
+//use function cli\line;
 //use function cli\prompt;
 //use PHPUnit\Framework\TestSuite as PHPUnit_TestSuite;
 //use PHPUnit\Framework\TestResult;
@@ -14,7 +15,7 @@ use function cli\line;
 //    require_once $autoloadPath2;
 //}
 
-echo "Welcome to the Brain Game!\n";
+
 //line("Welcome to the Brain Game!\n");
 
 //$name = prompt('May I have your name?');
