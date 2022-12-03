@@ -1,3 +1,4 @@
-﻿#!/usr/bin/env php
+#!/usr/bin/env php
 <?
-echo "Welcome to the Brain Game!\n";die();
+echo "Welcome to the Brain Game!\n";
+die();
