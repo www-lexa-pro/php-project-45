@@ -6,3 +6,4 @@ brain-games:
 	
 validate:
 	composer validate
+	
