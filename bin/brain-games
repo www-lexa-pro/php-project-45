@@ -16,6 +16,6 @@ if (file_exists($autoloadPath1)) {
 
 echo 'Welcome to the Brain Game!';
 //line('Welcome to the Brain Game!');
-exit();
+
 //$name = prompt('May I have your name?');
 //line("Hello, %s!", $name);
