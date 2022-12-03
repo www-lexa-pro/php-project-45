@@ -1,6 +1,5 @@
 #!/usr/bin/env php
 <?
-echo 'Хуй в говне';
 echo "Welcome to the Brain Game!\n";
 
 //use function cli\line;
