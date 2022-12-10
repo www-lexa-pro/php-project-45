@@ -1,0 +1,40 @@
+#!/usr/bin/env php
+<?
+
+use function cli\line;
+use function cli\prompt;
+use PHPUnit\Framework\TestSuite as PHPUnit_TestSuite;
+use PHPUnit\Framework\TestResult;
+use Hexlet\Code;
+
+$autoloadPath1 = __DIR__ . '/../../../autoload.php';
+$autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+if (file_exists($autoloadPath1)) {
+    require_once $autoloadPath1;
+} else {
+    require_once $autoloadPath2;
+}
+
+line('Welcome to the Brain Game!');
+$name = prompt('May I have your name?');
+line("Hello, %s!", $name);
+line('Find the greatest common divisor of given numbers.');
+
+for($i=0;$i<3;$i++) {
+	$nRand1 = rand(1,100);
+	$nRand2 = rand(1,100);
+	Code\Engine::game("Question: {$nRand1} {$nRand2}", gcd($nRand1, $nRand2), $name);
+}
+
+line("Congratulations, %s!", $name);
+
+function gcd($nRand1, $nRand2) {
+	
+	for($i = $nRand1; $i>0;$i--) {
+		if($nRand1%$i===0 && $nRand2%$i===0) {
+			return $i;
+		}
+	}
+	
+	return null;
+}
