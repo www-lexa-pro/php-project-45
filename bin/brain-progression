@@ -46,7 +46,7 @@ function progression() {
 		
 		if($i === $randSkip) {
 			$arRes["question"] .= " ";
-			$arRes["question"] .= "...";
+			$arRes["question"] .= "..";
 			$arRes["res"] = $arRes["n"];
 		} else {
 			$arRes["question"] .= " ";
