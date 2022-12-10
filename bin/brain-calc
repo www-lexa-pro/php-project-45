@@ -1,0 +1,51 @@
+#!/usr/bin/env php
+<?
+
+use function cli\line;
+use function cli\prompt;
+use PHPUnit\Framework\TestSuite as PHPUnit_TestSuite;
+use PHPUnit\Framework\TestResult;
+use Hexlet\Code;
+
+$autoloadPath1 = __DIR__ . '/../../../autoload.php';
+$autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+if (file_exists($autoloadPath1)) {
+    require_once $autoloadPath1;
+} else {
+    require_once $autoloadPath2;
+}
+
+line('Welcome to the Brain Game!');
+$name = prompt('May I have your name?');
+line("Hello, %s!", $name);
+line('What is the result of the expression?');
+
+$operands = ["+","-","*"];
+
+for($i=0;$i<3;$i++) {
+	$nRand1 = rand(0,100);
+	$nRand2 = rand(0,100);
+	$operand = array_rand($operands,1);
+	$op = $operands[$operand];
+	Code\Engine::game("Question: {$nRand1} {$op} {$nRand2}", calc($nRand1, $nRand2, $op), $name);
+}
+
+line("Congratulations, %s!", $name);
+
+function calc($nRand1, $nRand2, $operand) {
+	
+	$res = 0;
+	switch ($operand) {
+		case "+": 
+			$res = $nRand1 + $nRand2;
+			break;
+		case "-": 
+			$res = $nRand1 - $nRand2;
+			break;
+		case "*": 
+			$res = $nRand1 * $nRand2;
+			break;
+	}
+	
+	return $res;
+}
