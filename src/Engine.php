@@ -5,7 +5,7 @@ namespace Hexlet\Code;
 use function cli\line;
 use function cli\prompt;
 
-function game($question, $res, $name)
+function game(string $question, string $res, string $name)
 {
     $q = prompt($question);
     line("Your answer: %s!", $q);
