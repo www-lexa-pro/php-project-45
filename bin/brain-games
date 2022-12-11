@@ -1,9 +1,13 @@
 #!/usr/bin/env php
 <?
+
 use function cli\line;
 use function cli\prompt;
 use PHPUnit\Framework\TestSuite as PHPUnit_TestSuite;
 use PHPUnit\Framework\TestResult;
+use function Hexlet\Code\game;
+use function BrainGames\Cli\getName;
+
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
 $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -13,7 +17,4 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-
-line('/Welcome to the Brain Games!/');
-$name = prompt('May I have your name?');
-line("Hello, %s!", $name);
+$name = getName();
