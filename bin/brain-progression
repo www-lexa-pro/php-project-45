@@ -33,7 +33,7 @@ function progression() {
 	
 	$nRand = rand(1,100);
 	$nRandStep = rand(1,10);
-	$randSkip = rand(1,10);
+	$randSkip = rand(2,9);
 	
 	
 	$arRes["question"] = $nRand;
